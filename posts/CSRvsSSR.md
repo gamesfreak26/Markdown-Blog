@@ -36,19 +36,19 @@ Here's a high-level overview of how the SSR process works and how it generates a
 
 1.    **A user visits a URL**: a user navigates to a URL via their browser.
 
-2.    The server receives a request for the page: This action sends a request to the server, which receives the request and identifies the desired route or URL.
+2.    **The server receives a request for the page**: This action sends a request to the server, which receives the request and identifies the desired route or URL.
 
-3.    Fetching data: The server retrieves the necessary data from databases, external APIs, or other relevant sources. This data will be used to populate the HTML template.
+3.    **Fetching data**: The server retrieves the necessary data from databases, external APIs, or other relevant sources. This data will be used to populate the HTML template.
 
-4.    Template rendering: The server generates the HTML markup using a templating engine or a framework that combines the fetched data with the predefined structure of the page. This includes rendering the content, applying styles, and adding any necessary functionality.
+4.    **Template rendering**: The server generates the HTML markup using a templating engine or a framework that combines the fetched data with the predefined structure of the page. This includes rendering the content, applying styles, and adding any necessary functionality.
 
-5.    Sending the rendered page: Once the template is rendered and the HTML is generated, the server sends the fully rendered page to the user's browser as a response to the request.
+5.    **Sending the rendered page**: Once the template is rendered and the HTML is generated, the server sends the fully rendered page to the user's browser as a response to the request.
 
-6.    Displaying the page: The user's browser then displays the page without waiting for additional JavaScript execution since the initial page load does not depend on JavaScript code.
+6.    **Displaying the page**: The user's browser then displays the page without waiting for additional JavaScript execution since the initial page load does not depend on JavaScript code.
 
-7.    Rehydration: Along with the rendered HTML, the server also sends the JavaScript required to handle client-side interactivity and dynamic behavior. This JavaScript is responsible for "rehydrating" the static HTML into a fully interactive web app, ensuring a seamless transition from server-side rendering to client-side interactivity. For example, say an app has a form submit button, the rehydration process attaches the click event listener to the button, ensuring it fires when clicked. Without rehydration, the button will remain non-interactive when clicked.
+7.    **Rehydration**: Along with the rendered HTML, the server also sends the JavaScript required to handle client-side interactivity and dynamic behavior. This JavaScript is responsible for "rehydrating" the static HTML into a fully interactive web app, ensuring a seamless transition from server-side rendering to client-side interactivity. For example, say an app has a form submit button, the rehydration process attaches the click event listener to the button, ensuring it fires when clicked. Without rehydration, the button will remain non-interactive when clicked.
 
-8.    Repeat the rendering process: When the user navigates to other pages, the browser sends new requests to the server, and the process repeats itself.
+8.    **Repeat the rendering process**: When the user navigates to other pages, the browser sends new requests to the server, and the process repeats itself.
 
 Examples include:
 
